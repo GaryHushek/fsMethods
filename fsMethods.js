@@ -3,10 +3,6 @@ let fs = require("fs");
 
 // fs所有的功能函数封装在fsMethods对象中
 let fsMethods = {
-  // 保存this 方便链式编程
-  saveThis: function() {
-    return this;
-  },
   /**
    * 检测是文件还是目录(也可以检测文件或者目录存不存在)
    * options : {
@@ -51,7 +47,6 @@ let fsMethods = {
         }
       }
     });
-    return fsMethods.saveThis();
   },
   /**
    * 创建目录
@@ -85,7 +80,6 @@ let fsMethods = {
         options.success();
       }
     });
-    return fsMethods.saveThis();
   },
   /**
    * 创建写入文件
@@ -132,7 +126,6 @@ let fsMethods = {
         }
       }
     );
-    return fsMethods.saveThis();
   },
   /**
    * 追加文件
@@ -179,7 +172,6 @@ let fsMethods = {
         }
       }
     );
-    return fsMethods.saveThis();
   },
   /**
    * 读取文件的内容
@@ -218,7 +210,6 @@ let fsMethods = {
         }
       }
     );
-    return fsMethods.saveThis();
   },
   /**
    * 读取目录
@@ -250,7 +241,6 @@ let fsMethods = {
         options.success(data);
       }
     });
-    return fsMethods.saveThis();
   },
   /**
    * 重命名（剪切）
@@ -284,7 +274,6 @@ let fsMethods = {
         options.success();
       }
     });
-    return fsMethods.saveThis();
   },
   /**
    * 删除目录
@@ -317,7 +306,6 @@ let fsMethods = {
         options.success();
       }
     });
-    return fsMethods.saveThis();
   },
   /**
    * 删除文件
@@ -349,7 +337,6 @@ let fsMethods = {
         options.success();
       }
     });
-    return fsMethods.saveThis();
   },
   /**
    * 读取文件流
